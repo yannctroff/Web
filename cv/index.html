@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Yann CATTARIN</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png" >
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      padding: 0;
+    }
+
+    .selector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .btn {
+      margin: 1rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #2563eb;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .container,
+    .cv-pdf {
+      display: none;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: #1e293b;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .photo {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #60a5fa;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0 0.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #1d4ed8;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .cv-pdf iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+      margin-top: 1rem;
+    }
+
+    .close-btn {
+      display: inline-block;
+      margin: 1rem auto;
+      background-color: #ef4444;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .close-btn:hover {
+      background-color: #dc2626;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="selector" id="selector">
+    <h1>Choisissez la version du CV</h1>
+    <button class="btn" onclick="showWeb()">Version Web</button>
+    <button class="btn" onclick="showPDF()">Version PDF</button>
+  </div>
+
+  <div class="container" id="cvWeb">
+    <button class="close-btn" onclick="backToMenu()">Revenir au menu</button>
+    <header>
+      <img src="avatar_cp_630.jpg" alt="Photo de Yann CATTARIN" class="photo" />
+      <h1>Yann CATTARIN</h1>
+      <p><strong>Alternance / Bac+3 / Support technique - Admin Réseaux</strong></p>
+      <p>20 ans • Permis B • St-Martin-De-Sescas (33490)</p>
+      <p>📞 <a href="tel:+33632496879">06 32 49 68 79</a> • ✉️ <a href="mailto:contact@yannctr.fr">contact@yannctr.fr</a></p>
+    </header>
+
+    <section>
+      <h2>Compétences</h2>
+      <ul>
+        <li>GLPI niv.1, gestion de parc</li>
+        <li>VLAN, Routage, VPN Inter-Sites</li>
+        <li>Windows Server, Debian (IHM Texte)</li>
+        <li>PHP, HTML</li>
+        <li>Mise en service de nouveaux PC</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Expériences professionnelles</h2>
+      <ul>
+        <li><strong>Intermarché Langon</strong> – Caissier (30h/semaine, CDD depuis août 2024)</li>
+        <li><strong>Stages :</strong>
+          <ul>
+            <li>E.Leclerc – Mai à Juin 2023</li>
+            <li>GERBEC – Janvier & Octobre 2021</li>
+            <li>ENEDIS – Décembre 2020</li>
+            <li>APS – Février 2020</li>
+            <li>EGGP – Octobre 2019</li>
+          </ul>
+        </li>
+        <li><strong>Réalisations techniques :</strong>
+          <ul>
+            <li>Mise en conformité d'une baie réseau</li>
+            <li>Migration GLPI vers version 10 sous Linux</li>
+            <li>Optimisation de PC en entreprise</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Formation</h2>
+      <ul>
+        <li>Bachelor Bac+3 (Systèmes, Réseaux & Cloud) – Sup De Vinci, 2025/2026</li>
+        <li>BTS SN option IR – Lycée Alfred Kastler, 2022 à 2024</li>
+        <li>Bac Pro MELEC – Lycée Sud-Gironde, 2019 à 2022</li>
+        <li>Diplôme National du Brevet – 2020</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Centres d’intérêt</h2>
+      <ul>
+        <li>Musique (Pop, Remix)</li>
+        <li>Famille, Aide quotidienne</li>
+        <li>Cinéma (Science-fiction, Comédie)</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="cv-pdf" id="cvPDF">
+    <button class="close-btn" onclick="closePDF()">Fermer le PDF</button>
+    <iframe src="cv-yann-cattarin.pdf"></iframe>
+  </div>
+
+  <script>
+    function showWeb() {
+      document.getElementById('selector').style.display = 'none';
+      document.getElementById('cvWeb').style.display = 'block';
+    }
+
+    function showPDF() {
+      document.getElementById('selector').style.display = 'none';
+      document.getElementById('cvPDF').style.display = 'block';
+    }
+
+    function closePDF() {
+      document.getElementById('cvPDF').style.display = 'none';
+      document.getElementById('selector').style.display = 'flex';
+    }
+
+    function backToMenu() {
+      document.getElementById('cvWeb').style.display = 'none';
+      document.getElementById('selector').style.display = 'flex';
+   }
+
+  </script>
+</body>
+
+</html>

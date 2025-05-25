@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes réseaux sociaux</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png" >
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --bubble: rgba(0, 0, 0, 0.05);
+      --card-bg: rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f0f0f;
+      --text: #ffffff;
+      --bubble: rgba(255, 255, 255, 0.07);
+      --card-bg: rgba(255, 255, 255, 0.1);
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      z-index: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      height: 100%;
+      position: relative;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: var(--card-bg);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--text);
+      z-index: 10; /* Pour que le bouton soit au-dessus des bulles */
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0; /* Pour que les bulles soient entre l'arrière-plan et les boutons */
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background-color: currentColor;
+      opacity: 0.03; /* Plus de transparence */
+      animation: float 20s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+
+    h1 {
+      font-size: 2.8em;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .message {
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 0 20px;
+    }
+
+    .socials a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      background-color: var(--card-bg);
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: transform 0.2s, background-color 0.3s;
+      z-index: 2; /* S'assurer que les boutons sont au-dessus des bulles */
+    }
+
+    .socials a:hover {
+      transform: scale(1.05);
+      background-color: rgba(0,0,0,0.1);
+    }
+
+    .socials img {
+      width: 20px;
+      height: 20px;
+    }
+
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//stats.yannctr.fr/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '5']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Changer de thème</button>
+
+  <div class="background" id="background"></div>
+
+  <h1>Mes réseaux sociaux</h1>
+  <div class="message">Retrouve-moi ici :</div>
+
+  <div class="socials">
+    <a href="https://www.tiktok.com/@yannctr.officiel" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a href="https://www.instagram.com/yann_ctr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.threads.net/@yann_ctr" target="_blank"><i class="fab fa-threads"></i> Threads</a>
+    <a href="https://www.facebook.com/yannctr.off" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://www.twitch.tv/YannCTR_Officiel" target="_blank"><i class="fab fa-twitch"></i> Twitch</a>
+    <a href="https://x.com/yannctr_off" target="_blank"><i class="fab fa-x-twitter"></i> X</a>
+    <a href="https://discord.com/users/yannctr.officiel" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+    <a href="https://bsky.app/profile/yannctroff.bsky.social" target="_blank">
+      <img src="https://bsky.app/static/favicon-32x32.png" alt="Bluesky"> Bluesky
+    </a>
+    <a href="https://www.linkedin.com/in/yannctroff" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://www.youtube.com/@YannCATTARIN" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+  </div>
+
+  <footer>&copy; 2025 - YannCTR</footer>
+
+  <script>
+    // Fond animé : bulles
+    const container = document.getElementById("background");
+
+    function createBubbles() {
+      container.innerHTML = ''; // Nettoie les anciennes bulles
+      for (let i = 0; i < 40; i++) {
+        const b = document.createElement("div");
+        b.className = "bubble";
+        const size = Math.random() * 80 + 20;
+        b.style.width = b.style.height = size + "px";
+        b.style.left = Math.random() * 100 + "vw";
+        b.style.animationDuration = 10 + Math.random() * 20 + "s";
+        container.appendChild(b);
+      }
+    }
+
+    // Détection du thème + stockage
+    const root = document.documentElement;
+
+    function setTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      createBubbles(); // recrée les bulles avec la nouvelle couleur
+    }
+
+    function toggleTheme() {
+      const current = root.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    }
+
+    (function initializeTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored) {
+        setTheme(stored);
+      } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDark ? 'dark' : 'light');
+      }
+    })();
+  </script>
+</body>
+</html>

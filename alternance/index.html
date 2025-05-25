@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alternance - Yann Cattarin</title>
+  <link rel="icon" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e1a25;
+      color: #f0f0f0;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .animated-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: radial-gradient(circle, #00b4d8 3px, transparent 3px);
+      background-size: 20px 20px;
+      animation: moveDots 3s linear infinite;
+      opacity: 0.15;
+    }
+
+    @keyframes moveDots {
+      0% { background-position: 0 0; }
+      100% { background-position: 40px 40px; }
+    }
+
+    header, .container, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .cta {
+      margin: 2rem 0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cta a, .cta button {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #00b4d8;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover, .cta button:hover {
+      background-color: #0096c7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #061016;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://stats.yannctr.fr/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+</head>
+<body>
+  <div class="animated-bg"></div>
+
+  <header>
+    <h1>Yann Cattarin</h1>
+    <p>Recherche d'alternance - Bachelor Systèmes, Réseaux & Cloud</p>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      Bonjour, je m'appelle Yann, j'ai obtenu mon BTS SNIR juillet 2024 et je suis à la recherche d'une alternance pour poursuivre mes études en Bachelor Systèmes, Réseaux & Cloud à Sup de Vinci (Bordeaux).
+      <br><br>
+      J’ai acquis de solides bases en réseau : routage, VPN site-à-site, pare-feu avec pfSense… J’ai envie maintenant de développer aussi mes compétences en support technique, un domaine que je n’ai pas encore eu l’occasion d’explorer pendant ma formation.
+      <br><br>
+      Je suis motivé, sérieux et prêt à m’investir pleinement dans les missions qu’on me confiera. Si mon profil peut correspondre à ce que vous cherchez, n’hésitez pas à me contacter via les infos de contact sur mon CV ou via le bouton ci-dessous.  Vous pouvez également joindre mon référent de l'école au 07.48.11.12.41 pour plus d’infos.
+    </div>
+
+    <div class="cta">
+      <a href="https://cv.yannctr.fr" target="_blank">Voir mon CV</a>
+      <a href="mailto:contact@yannctr.fr">Me contacter</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Yann Cattarin - alternance.yannctr.fr
+  </footer>
+</body>
+</html>

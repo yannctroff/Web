@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APOAL - Le Jeu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>APOAL - Le Jeu</h1>
+  <div class="boxes">
+    <!-- 24 boîtes comme à la TV -->
+    <!-- Tu peux adapter le nombre ici -->
+    <div class="box" data-number="1">1</div>
+    <div class="box" data-number="2">2</div>
+    <div class="box" data-number="3">3</div>
+    <div class="box" data-number="4">4</div>
+    <div class="box" data-number="5">5</div>
+    <div class="box" data-number="6">6</div>
+    <div class="box" data-number="7">7</div>
+    <div class="box" data-number="8">8</div>
+    <div class="box" data-number="9">9</div>
+    <div class="box" data-number="10">10</div>
+    <div class="box" data-number="11">11</div>
+    <div class="box" data-number="12">12</div>
+    <div class="box" data-number="13">13</div>
+    <div class="box" data-number="14">14</div>
+    <div class="box" data-number="15">15</div>
+    <div class="box" data-number="16">16</div>
+    <div class="box" data-number="17">17</div>
+    <div class="box" data-number="18">18</div>
+    <div class="box" data-number="19">19</div>
+    <div class="box" data-number="20">20</div>
+    <div class="box" data-number="21">21</div>
+    <div class="box" data-number="22">22</div>
+    <div class="box" data-number="23">23</div>
+    <div class="box" data-number="24">24</div>
+  </div>
+  
+
+  <div class="pyramid">
+    <div class="side left">
+      <div class="amount red" data-value="0.01">0,01 €</div>
+      <div class="amount red" data-value="1">1 €</div>
+      <div class="amount red" data-value="5">5 €</div>
+      <div class="amount red" data-value="10">10 €</div>
+      <div class="amount red" data-value="25">25 €</div>
+      <div class="amount red" data-value="50">50 €</div>
+      <div class="amount red" data-value="75">75 €</div>
+      <div class="amount red" data-value="100">100 €</div>
+      <div class="amount red" data-value="200">200 €</div>
+      <div class="amount red" data-value="300">300 €</div>
+    </div>
+    <div class="side right">
+      <div class="amount gold" data-value="1000">1 000 €</div>
+      <div class="amount gold" data-value="5000">5 000 €</div>
+      <div class="amount gold" data-value="10000">10 000 €</div>
+      <div class="amount gold" data-value="25000">25 000 €</div>
+      <div class="amount gold" data-value="50000">50 000 €</div>
+      <div class="amount gold" data-value="100000">100 000 €</div>
+      <div class="amount gold" data-value="250000">250 000 €</div>
+      <div class="amount gold" data-value="500000">500 000 €</div>
+      <div class="amount gold" data-value="750000">750 000 €</div>
+      <div class="amount gold" data-value="1000000">1 000 000 €</div>
+    </div>
+  </div>
+
+  <audio id="music_intro" src="assets/sounds/music_intro.mp3" loop></audio>
+  <audio id="sound_box_open" src="assets/sounds/box_open.mp3"></audio>
+  <audio id="sound_call_banker" src="assets/sounds/call_banker.mp3"></audio>
+  <audio id="sound_offer" src="assets/sounds/offer.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
