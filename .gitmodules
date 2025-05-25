@@ -1,0 +1,9 @@
+[submodule "meteofox"]
+	path = meteofox
+	url = https://gitlab.ciel-kastler.fr/meteofox/meteofox_site_laravel
+[submodule "progressbar"]
+	path = progressbar
+	url = https://github.com/yannctroff/progress-bar
+[submodule "monprenom"]
+	path = monprenom
+	url = https://github.com/yannctroff/valeur_prenom
