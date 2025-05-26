@@ -11,9 +11,9 @@ Ce dépôt contient le **code source de la racine web (`/var/www`)** de mon serv
 | `alternance`  | Site de présentation pour ma recherche d'alternance, accessible via [alternance.yannctr.fr](https://alternance.yannctr.fr)                       |
 | `apoal`       | Projet de jeu web inspiré de *À Prendre ou à Laisser*. (Développement en cours)                     |
 | `cv`          | Page contenant mon CV en ligne, accessible via [cv.yannctr.fr](https://cv.yannctr.fr). |
-| `html`        | Espace de tests HTML divers.                                                |
+| `html`        | Portail récapitulatif de mes sites web.                                                |
 | `matomo`      | Interface de suivi statistique auto-hébergée avec Matomo.                  |
-| `meteofox`    | 🌦️ Site météo Laravel pour le lycée Kastler de Talence. *(submodule GitLab)* |
+| `meteofox`    | 🌦️ Projet Web BTS de météo avec Laravel pour le lycée Kastler de Talence. *(submodule GitLab)* |
 | `monprenom`   | 🔤 Projet d'analyse de la valeur symbolique/prénoms. *(submodule GitHub)*   |
 | `progressbar` | 📊 Projet de barre de progression personnalisable. *(submodule GitHub)*     |
 | `socials`     | Page de type "link-in-bio" regroupant mes liens de réseaux sociaux.        |
