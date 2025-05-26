@@ -1,6 +1,6 @@
 # 🌐 Web – Racine des sites hébergés sur mon VPS
 
-Ce dépôt contient le **code source de la racine web (`/var/www`)** de mon serveur VPS personnel. Il centralise plusieurs sites ou applications web, répartis dans différents sous-dossiers.
+Bienvenue sur ce dépôt GitHub !! Il contient le **code source de la racine web (`/var/www/`)** de mon serveur VPS personnel (accessible sur [yannctr.fr](https://yannctr.fr)). Il centralise plusieurs sites ou applications web, répartis dans différents sous-dossiers.
 
 ---
 
@@ -27,15 +27,8 @@ Ce dépôt contient le **code source de la racine web (`/var/www`)** de mon serv
 
 ---
 
-## 📎 Remarques sur les submodules
-
-Certains projets ne sont pas directement visibles sur GitHub car ils proviennent d'autres plateformes :
-
-- `meteofox` est hébergé sur **GitLab**.  
-  GitHub n'affiche pas correctement les sous-modules GitLab, donc le lien `meteofox` peut apparaître cassé dans l'interface.
-
-### 🔗 Liens des submodules
-- `meteowan` : [https://gitlab.ciel-kastler.fr/projets-snir-2024/meteowan_2024/site-web](https://gitlab.ciel-kastler.fr/meteofox/meteofox_site_laravel)
+## 🔗 Liens des submodules
+- `meteowan` : [https://github.com/yannctroff/meteowan](https://github.com/yannctroff/meteowan)
 - `monprenom`: [https://github.com/yannctroff/valeur_prenom](https://github.com/yannctroff/valeur_prenom)
 - `progressbar`: [https://github.com/yannctroff/progress-bar](https://github.com/yannctroff/progress-bar)
 
@@ -43,9 +36,10 @@ Certains projets ne sont pas directement visibles sur GitHub car ils proviennent
 
 ## 📥 Clonage avec les sous-modules
 
-Pour tout récupérer correctement :
+Pour récupérer correctement le projet avec les dossiers dit "submodules" :
 
 ```bash
 git clone https://github.com/yannctroff/Web.git
 cd Web
 git submodule update --init --recursive
+```
