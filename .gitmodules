@@ -1,6 +1,6 @@
-[submodule "meteofox"]
-	path = meteofox
-	url = https://gitlab.ciel-kastler.fr/meteofox/meteofox_site_laravel
+[submodule "meteowan"]
+	path = meteowan
+	url = https://gitlab.ciel-kastler.fr/projets-snir-2024/meteowan_2024/site-web
 [submodule "progressbar"]
 	path = progressbar
 	url = https://github.com/yannctroff/progress-bar
