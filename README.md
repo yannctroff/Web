@@ -12,7 +12,6 @@ Bienvenue sur ce dépôt GitHub !! Il contient le **code source de la racine web
 | `apoal`       | Projet de jeu web inspiré de *À Prendre ou à Laisser*. (Développement en cours) accessible via [apoal.yannctr.fr](https://apoal.yannctr.fr)                   |
 | `cv`          | Page contenant mon CV en ligne, accessible via [cv.yannctr.fr](https://cv.yannctr.fr). |
 | `html`        | Portail récapitulatif de mes sites web, accessible sur [yannctr.fr](https://yannctr.fr)                                              |
-| `matomo`      | Interface de suivi statistique auto-hébergée avec Matomo.                  |
 | `meteowan`    | 🌦️ Projet Web BTS de météo avec Laravel pour le lycée Kastler de Talence. *(submodule GitHub)* accessible sur [meteowan.yannctr.fr](https://meteowan.yannctr.fr)|
 | `monprenom`   | 🔤 Projet d'analyse de la valeur symbolique/prénoms. *(submodule GitHub)* accessible sur [monprenom.yannctr.fr](https://monprenom.yannctr.fr) |
 | `progressbar` | 📊 Projet de barre de progression du temps. *(submodule GitHub)* accessible via [progressbar.yannctr.fr](https://progressbar.yannctr.fr)  |
