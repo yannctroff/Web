@@ -38,7 +38,7 @@ include 'includes/header.php';
 </head>
 <body>
 <main class="container">
-        <h2>Connexion NAS</h2>
+        <h2 style="text-align: center;">Connexion NAS</h2>
         <?php if ($message): ?>
             <p style="color:red;"><?=htmlspecialchars($message)?></p>
         <?php endif; ?>
@@ -48,8 +48,6 @@ include 'includes/header.php';
             <button type="submit">Connexion</button>
         </form>
     </main>
-    <footer>
-        &copy; 2025 YannCTR - NAS personnel
-    </footer>
 </body>
 </html>
+<?php include 'includes/footer.php'; ?>

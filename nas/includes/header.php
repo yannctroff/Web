@@ -24,6 +24,6 @@
 </head>
 <body>
     <header>
-        <h1>NAS personnel - Bienvenue <?= htmlspecialchars($_SESSION['user'] ?? 'utilisateur') ?></h1>
+        <h1>NAS personnel - Bienvenue <?= htmlspecialchars($_SESSION['user'] ?? '') ?></h1>
     </header>
     <main class="container">

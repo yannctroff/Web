@@ -1,4 +1,3 @@
-/* css/style.css */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 :root {
@@ -12,36 +11,42 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     margin: 0;
     padding: 0;
+    height: auto;
+    min-height: 100vh;
     font-family: 'Orbitron', sans-serif;
     background: var(--bg-gradient);
     color: var(--main-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 header {
-    width: 100%;
-    text-align: center;
-    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: rgba(0, 255, 234, 0.05);
     border-bottom: 1px solid var(--main-color);
     box-shadow: 0 0 10px var(--main-color);
+    padding: 20px 10px;
+    text-align: center;
+    backdrop-filter: blur(4px);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--main-color);
     text-shadow: var(--text-shadow);
     margin-bottom: 1rem;
     word-break: break-word;
 }
 
-.container {
+.container,
+main.container {
     width: 100%;
     max-width: 1000px;
     padding: 20px;
@@ -63,6 +68,31 @@ ul li {
     word-wrap: break-word;
 }
 
+/* Conteneur ligne fichier/dossier + bouton supprimer */
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espace entre lien et bouton */
+}
+
+/* Le lien prend toute la largeur dispo */
+.list-item a,
+.list-item .folder-link {
+    flex-grow: 1;
+    width: auto; /* enlève largeur fixe */
+    max-width: none;
+    text-align: left; /* alignement à gauche */
+}
+
+/* Bouton suppression reste fixe à droite */
+.list-item form.form-delete {
+    flex-shrink: 0; /* ne rétrécit pas */
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+/* Lien général */
 a {
     color: var(--main-color);
     text-decoration: none;
@@ -82,7 +112,40 @@ a:hover {
     box-shadow: 0 0 10px var(--main-color);
 }
 
-button, input[type="submit"] {
+/* Bouton pour dossiers avec couleur différente */
+.folder-link {
+    background-color: #004d40;
+    /* couleur différente */
+    color: #00ffea;
+    padding: 10px 14px;
+    /* même padding que les autres liens */
+    border-radius: 6px;
+    border: 1px solid #00ffea;
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    /* même taille de police */
+    line-height: 1.6;
+    /* même hauteur de ligne */
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: 100%;
+    /* comme les autres liens */
+    box-sizing: border-box;
+    /* éviter dépassement */
+}
+
+.folder-link:hover {
+    background-color: #00ffea;
+    color: #000;
+    box-shadow: 0 0 10px #00ffea;
+}
+
+/* Styles généraux pour tous les boutons sauf suppression */
+button:not(.btn-suppr),
+input[type="submit"]:not(.btn-suppr) {
     background: transparent;
     border: 2px solid var(--main-color);
     color: var(--main-color);
@@ -98,43 +161,36 @@ button, input[type="submit"] {
     margin: 10px auto;
 }
 
-button:hover, input[type="submit"]:hover {
+button:not(.btn-suppr):hover,
+input[type="submit"]:not(.btn-suppr):hover {
     background-color: var(--main-color);
     color: #000;
     box-shadow: 0 0 10px var(--main-color);
 }
 
-footer {
-    margin: 20px 0;
-    text-align: center;
-    color: #888;
-    font-size: 0.9rem;
+/* Styles spécifiques bouton suppression */
+.btn-suppr {
+    background: #e74c3c;
+    border: none;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
-/* Responsive layout for small screens */
-@media screen and (max-width: 768px) {
-    h1, h2 {
-        font-size: 1.3rem;
-    }
-
-    .container {
-        padding: 15px;
-        margin: 20px 10px;
-    }
-
-    ul li, a, button {
-        font-size: 0.95rem;
-    }
-
-    a {
-        padding: 10px;
-    }
-
-    button {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
+.btn-suppr:hover {
+    filter: brightness(85%);
 }
+
+/* Style général des formulaires */
 form {
     width: 100%;
     max-width: 400px;
@@ -174,6 +230,55 @@ form input[type="submit"] {
     width: 100%;
 }
 
+/* --- AJOUT : désactiver le style pour les formulaires de suppression --- */
+form.form-delete {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+footer {
+    margin: 20px 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* Responsive layout for small screens */
+@media screen and (max-width: 768px) {
+
+    h1,
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    
+    .container {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+
+    ul li,
+    a,
+    button {
+        font-size: 0.95rem;
+    }
+
+    a {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
 @media screen and (max-width: 480px) {
     form {
         padding: 15px;
@@ -192,37 +297,4 @@ form input[type="submit"] {
     h2 {
         font-size: 1.3rem;
     }
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(to bottom right, #08121C, #0F2B3E);
-    color: #00ffea;
-}
-
-main.container {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ffea;
-}
-
-footer {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    opacity: 0.6;
-    text-align: center;
 }
